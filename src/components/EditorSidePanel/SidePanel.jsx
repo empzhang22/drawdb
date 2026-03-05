@@ -23,6 +23,7 @@ import EnumsTab from "./EnumsTab/EnumsTab";
 import { isRtl } from "../../i18n/utils/rtl";
 import i18n from "../../i18n/i18n";
 import DBMLEditor from "./DBMLEditor";
+import StatsBox from "./StatsBox";
 
 export default function SidePanel({ width, resize, setResize }) {
   const { layout, setLayout } = useLayout();
@@ -136,6 +137,7 @@ export default function SidePanel({ width, resize, setResize }) {
             </Tabs>
           )}
         </div>
+        <StatsBox />
         {layout.issues && (
           <div className="mt-auto border-t-2 border-color shadow-inner">
             <Issues />
