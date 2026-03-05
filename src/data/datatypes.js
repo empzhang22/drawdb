@@ -21,6 +21,18 @@ const binaryRegex = /^[01]+$/;
 
 /* eslint-disable no-unused-vars */
 const defaultTypesBase = {
+  MYPRIMETYPE: {
+    type: "MYPRIMETYPE",
+    color: intColor,
+    checkDefault: (field) => {
+      const value = String(field.default).trim();
+      return ["1", "3", "5", "7", "11"].includes(value);
+    },
+    hasCheck: true,
+    isSized: false,
+    hasPrecision: false,
+    canIncrement: false,
+  },
   INT: {
     type: "INT",
     color: intColor,
@@ -353,6 +365,19 @@ export const defaultTypes = new Proxy(defaultTypesBase, {
 });
 
 const mysqlTypesBase = {
+  MYPRIMETYPE: {
+    type: "MYPRIMETYPE",
+    color: intColor,
+    checkDefault: (field) => {
+      const value = String(field.default).trim();
+      return ["1", "3", "5", "7", "11"].includes(value);
+    },
+    hasCheck: true,
+    isSized: false,
+    hasPrecision: false,
+    canIncrement: false,
+    signed: true,
+  },
   TINYINT: {
     type: "TINYINT",
     color: intColor,
@@ -818,6 +843,17 @@ export const mysqlTypes = new Proxy(mysqlTypesBase, {
 });
 
 const postgresTypesBase = {
+  MYPRIMETYPE: {
+    type: "MYPRIMETYPE",
+    color: intColor,
+    checkDefault: (field) => {
+      const value = String(field.default).trim();
+      return ["1", "3", "5", "7", "11"].includes(value);
+    },
+    hasCheck: true,
+    isSized: false,
+    hasPrecision: false,
+  },
   SMALLINT: {
     type: "SMALLINT",
     color: intColor,
@@ -1407,6 +1443,17 @@ export const postgresTypes = new Proxy(postgresTypesBase, {
 });
 
 const sqliteTypesBase = {
+  MYPRIMETYPE: {
+    type: "MYPRIMETYPE",
+    color: intColor,
+    checkDefault: (field) => {
+      const value = String(field.default).trim();
+      return ["1", "3", "5", "7", "11"].includes(value);
+    },
+    hasCheck: true,
+    isSized: false,
+    hasPrecision: false,
+  },
   INTEGER: {
     type: "INTEGER",
     color: intColor,
@@ -1556,6 +1603,17 @@ export const sqliteTypes = new Proxy(sqliteTypesBase, {
 });
 
 const mssqlTypesBase = {
+  MYPRIMETYPE: {
+    type: "MYPRIMETYPE",
+    color: intColor,
+    checkDefault: (field) => {
+      const value = String(field.default).trim();
+      return ["1", "3", "5", "7", "11"].includes(value);
+    },
+    hasCheck: true,
+    isSized: false,
+    hasPrecision: false,
+  },
   TINYINT: {
     type: "TINYINT",
     color: intColor,
@@ -1977,6 +2035,18 @@ export const mssqlTypes = new Proxy(mssqlTypesBase, {
 });
 
 const oraclesqlTypesBase = {
+  MYPRIMETYPE: {
+    type: "MYPRIMETYPE",
+    color: intColor,
+    checkDefault: (field) => {
+      const value = String(field.default).trim();
+      return ["1", "3", "5", "7", "11"].includes(value);
+    },
+    hasCheck: true,
+    isSized: false,
+    hasPrecision: false,
+    noDefault: false,
+  },
   INTEGER: {
     type: "INTEGER",
     color: intColor,
